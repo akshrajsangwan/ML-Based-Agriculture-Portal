@@ -1,0 +1,296 @@
+/* Fantastic Agriculture Theme 
+   Modern, Clean, and Nature-Inspired 
+*/
+
+:root {
+  --primary-green: #184d36;
+  --accent-green: #2e7d32;
+  --leaf-light: #81c784;
+  --earth-brown: #5d4037;
+  --bg-light: #f4f7f6;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --text-dark: #1b1b1b;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+  --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+/* --- Navbar Enhancements --- */
+.navbar-main {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  transition: var(--transition-base);
+}
+
+.navbar-brand img {
+  height: 45px; /* Slightly larger logo */
+}
+
+.nav-link-inner--text {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--primary-green) !important;
+}
+
+/* --- Fantastic Hero Section --- */
+.hero {
+  position: relative;
+  min-height: 90vh; /* Taller hero */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Modern slanted cut */
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  transition: transform 20s ease;
+  z-index: -1;
+}
+
+.hero:hover .hero-bg {
+  transform: scale(1.1); /* Subtle zoom effect */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  max-width: 800px;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero h1 span {
+  color: var(--leaf-light);
+  display: inline-block;
+}
+
+.hero .lead {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+/* Hero Buttons */
+.btn-primary-custom {
+  background: var(--accent-green);
+  color: #fff;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
+  transition: var(--transition-base);
+  border: none;
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(46, 125, 50, 0.5);
+  background: #256628;
+  color: white;
+}
+
+.btn-outline-custom {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+  padding: 13px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  backdrop-filter: blur(5px);
+  transition: var(--transition-base);
+}
+
+.btn-outline-custom:hover {
+  background: #fff;
+  color: var(--primary-green);
+  border-color: #fff;
+}
+
+/* --- Services Cards (Glassmorphism) --- */
+.services {
+  padding: 50px 0 100px;
+  margin-top: -50px; /* Overlap with hero */
+  position: relative;
+  z-index: 5;
+}
+
+.card-service {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-base);
+  height: 100%;
+  position: relative;
+  top: 0;
+}
+
+.card-service:hover {
+  top: -10px;
+  box-shadow: var(--shadow-hover);
+}
+
+.card-service .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card-service:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.card-service .card-body {
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-service p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* --- Features Section --- */
+.features-section {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.feature-box {
+  padding: 2rem;
+  border-radius: 15px;
+  transition: var(--transition-base);
+  border: 1px solid transparent;
+}
+
+.feature-box:hover {
+  background: var(--bg-light);
+  border-color: rgba(0,0,0,0.05);
+}
+
+.icon-shape-custom {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg-light);
+  color: var(--accent-green);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: var(--transition-base);
+}
+
+.feature-box:hover .icon-shape-custom {
+  background: var(--accent-green);
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+/* --- Tech Stack (Floating) --- */
+.tech-stack {
+  padding: 80px 0;
+  background: linear-gradient(to right, #f4f7f6, #fff);
+}
+
+.tech-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  transition: var(--transition-base);
+  border: 1px solid #eee;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-color: var(--leaf-light);
+}
+
+.tech-card img {
+  max-height: 50px;
+  margin-bottom: 15px;
+}
+
+.tech-card h6 {
+  font-size: 0.8rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* --- Chatbot Widget --- */
+.chat-widget {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.chat-quote-box {
+  font-family: 'Merriweather', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--primary-green);
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-author {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .hero { clip-path: none; min-height: 70vh; }
+  .hero h1 { font-size: 2.5rem; }
+  .services { margin-top: 0; }
+}
